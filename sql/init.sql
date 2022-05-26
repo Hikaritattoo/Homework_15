@@ -1,3 +1,4 @@
+--Создаем сперва зависимые таблицы, в которых хранятся профильные данные, чтоб появились параметры, на которые ссылаться основной таблице--
 CREATE TABLE IF NOT EXISTS animal_type (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL
@@ -22,7 +23,8 @@ CREATE TABLE IF NOT EXISTS outcome_type (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) NOT NULL
 );
-
+--Теперь создаем основную таблицу, в которой прописываем связи с зависимыми таблицами. В базе может быть значение NULL--
+-- в строках с именем и цветом, поэтому ограничение убираем --
 CREATE TABLE IF NOT EXISTS new_animals (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     age_upon_outcome VARCHAR (255) NOT NULL,

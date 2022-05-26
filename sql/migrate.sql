@@ -1,6 +1,7 @@
 INSERT INTO animal_type (name)
 SELECT DISTINCT animal_type FROM animals;
 
+--здесь мы упорядочиваем данные для наших зависимых таблиц, оставляя уникальные значения, и указываем миграцию для параметров основной таблицы--
 
 INSERT INTO animal_breed (name)
 SELECT DISTINCT breed FROM animals;
@@ -36,7 +37,6 @@ INSERT INTO new_animals (
     outcome_subtype_id,
     outcome_type_id
 )
-
 
 SELECT
     age_upon_outcome,

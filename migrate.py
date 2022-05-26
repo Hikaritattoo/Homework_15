@@ -17,6 +17,8 @@ def get_sql_from_file(file_name):
 
 
 def main():
+    """Функция, которая выполняет миграцию данных"""
+
     connection = sqlite3.connect(DATABASE_PATH)
     cursor = connection.cursor()
     sql = get_sql_from_file(join(SQL_DIR_PATH, INIT_MIGRATION_FILE_PATH, DATA_MIGRATION_FILE_PATH))

@@ -28,3 +28,5 @@ GET_ANIMAL_DATA_BY_ID = """
             ON outcome_type.id = new_animals.outcome_type_id
         WHERE new_animals.animal_id = :1
 """
+
+# отдельный файл для запроса данных из новой таблицы new_animals
